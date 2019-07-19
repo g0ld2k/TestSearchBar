@@ -25,6 +25,30 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        let sc = UISearchController(searchResultsController: nil)
+        sc.delegate = self
+        let scb = sc.searchBar
+        scb.tintColor = UIColor.green
+        scb.barTintColor = UIColor.yellow
+        
+        
+        if let textfield = scb.value(forKey: "searchField") as? UITextField {
+            textfield.textColor = UIColor.blue
+            if let backgroundview = textfield.subviews.first {
+                
+                // Background color
+                backgroundview.backgroundColor = UIColor.red
+                
+                // Rounded corner
+                backgroundview.layer.cornerRadius = 5;
+                backgroundview.clipsToBounds = true;
+                
+            }
+        }
+
+        navigationItem.searchController = sc
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -88,3 +112,6 @@ class MasterViewController: UITableViewController {
 
 }
 
+extension MasterViewController: UISearchControllerDelegate {
+    
+}
