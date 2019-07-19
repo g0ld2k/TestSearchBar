@@ -46,6 +46,8 @@ class MasterViewController: UITableViewController {
                 
             }
         }
+        
+        navigationController?.navigationBar.barTintColor = UIColor.blue
 
         navigationItem.searchController = sc
         navigationItem.hidesSearchBarWhenScrolling = false
