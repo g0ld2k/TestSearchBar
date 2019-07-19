@@ -15,6 +15,7 @@
 		2C1409BA22E256BE0077C1CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C1409B822E256BE0077C1CD /* LaunchScreen.storyboard */; };
 		2C1409C522E256BE0077C1CD /* TestSearchBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1409C422E256BE0077C1CD /* TestSearchBarTests.swift */; };
 		2C1409D022E256BE0077C1CD /* TestSearchBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1409CF22E256BE0077C1CD /* TestSearchBarUITests.swift */; };
+		2C76273722E25F9700A91A71 /* UISearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76273622E25F9700A91A71 /* UISearchBarExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2C1409CB22E256BE0077C1CD /* TestSearchBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSearchBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C1409CF22E256BE0077C1CD /* TestSearchBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSearchBarUITests.swift; sourceTree = "<group>"; };
 		2C1409D122E256BE0077C1CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C76273622E25F9700A91A71 /* UISearchBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				2C1409B622E256BE0077C1CD /* Assets.xcassets */,
 				2C1409B822E256BE0077C1CD /* LaunchScreen.storyboard */,
 				2C1409BB22E256BE0077C1CD /* Info.plist */,
+				2C76273622E25F9700A91A71 /* UISearchBarExtension.swift */,
 			);
 			path = TestSearchBar;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				2C1409B222E256BC0077C1CD /* DetailViewController.swift in Sources */,
 				2C1409B022E256BC0077C1CD /* MasterViewController.swift in Sources */,
 				2C1409AE22E256BC0077C1CD /* AppDelegate.swift in Sources */,
+				2C76273722E25F9700A91A71 /* UISearchBarExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

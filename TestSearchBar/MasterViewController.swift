@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController, UISearchBarDelegate {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
@@ -26,28 +26,18 @@ class MasterViewController: UITableViewController {
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
+        navigationController?.navigationBar.barTintColor = UIColor.blue
+        
         let sc = UISearchController(searchResultsController: nil)
         sc.delegate = self
         let scb = sc.searchBar
+        scb.delegate = self
         scb.tintColor = UIColor.green
         scb.barTintColor = UIColor.yellow
         
-        
-        if let textfield = scb.value(forKey: "searchField") as? UITextField {
-            textfield.textColor = UIColor.blue
-            if let backgroundview = textfield.subviews.first {
-                
-                // Background color
-                backgroundview.backgroundColor = UIColor.red
-                
-                // Rounded corner
-                backgroundview.layer.cornerRadius = 5;
-                backgroundview.clipsToBounds = true;
-                
-            }
-        }
-        
-        navigationController?.navigationBar.barTintColor = UIColor.blue
+        scb.setTextFieldColor(color: UIColor.green)
+        scb.setTextColor(color: UIColor.red)
+        scb.setPlaceholderTextColor(color: UIColor.yellow)
 
         navigationItem.searchController = sc
         navigationItem.hidesSearchBarWhenScrolling = false
